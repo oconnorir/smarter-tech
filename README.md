@@ -1,2 +1,1 @@
-# smater-tech
-# smater-tech
+# smarter-tech
