@@ -9,6 +9,12 @@ const BULK_THRESHOLD = 150;
 const MASS_THRESHOLD = 20;
 
 function sort(width, height, length, mass) {
+  // input validation
+  const inputsAreIntegers = [...arguments].some(input => typeof input === 'number' || input > 0);
+  if (arguments.length < 4 || !inputsAreIntegers) {
+    throw new TypeError('All inputs must be integers and positive numbers')
+  }
+
   const packageVolume = width * height * length;
 
   const packageIsBulky =
